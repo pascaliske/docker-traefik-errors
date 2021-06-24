@@ -1,0 +1,70 @@
+{
+  "name": "docker-traefik-errors",
+  "description": "",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Pascal Iske",
+    "email": "info@pascaliske.dev",
+    "url": "https://pascaliske.dev"
+  },
+  "repository": {
+    "url": "https://github.com/pascaliske/docker-traefik-errors.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/pascaliske/docker-traefik-errors/issues"
+  },
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "postinstall": "ngcc",
+    "start": "ng serve --ssl",
+    "build": "ng build --configuration production",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,scss,html,md,mdx,json}\"",
+    "version": "bump --yes package.json",
+    "changelog": "standard-changelog"
+  },
+  "prettier": "@pascaliske/prettier-config",
+  "dependencies": {
+    "@angular/animations": "~12.1.1",
+    "@angular/common": "~12.1.1",
+    "@angular/compiler": "~12.1.1",
+    "@angular/core": "~12.1.1",
+    "@angular/forms": "~12.1.1",
+    "@angular/platform-browser": "~12.1.1",
+    "@angular/platform-browser-dynamic": "~12.1.1",
+    "@angular/router": "~12.1.1",
+    "@ngneat/until-destroy": "^8.0.4",
+    "http-status-codes": "^2.1.4",
+    "ngx-progressbar": "^6.1.1",
+    "rxjs": "~6.6.0",
+    "tslib": "^2.2.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-builders/custom-webpack": "^12.1.0",
+    "@angular-devkit/build-angular": "~12.1.1",
+    "@angular-eslint/builder": "^12.2.0",
+    "@angular-eslint/eslint-plugin": "^12.2.0",
+    "@angular-eslint/eslint-plugin-template": "^12.2.0",
+    "@angular-eslint/schematics": "^12.2.0",
+    "@angular-eslint/template-parser": "^12.2.0",
+    "@angular/cli": "~12.1.1",
+    "@angular/compiler-cli": "~12.1.1",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@pascaliske/eslint-config": "^2.0.4",
+    "@pascaliske/prettier-config": "^1.1.2",
+    "@rstacruz/bump-cli": "^2.0.0",
+    "@types/node": "^16.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "eslint": "^7.30.0",
+    "husky": "^7.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.2",
+    "standard-changelog": "^2.0.27",
+    "typescript": "~4.3.2"
+  }
+}

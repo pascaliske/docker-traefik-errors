@@ -1,0 +1,10 @@
+ng-progress {
+    .ng-bar {
+        background-color: var(--color-accent) !important;
+    }
+
+    .ng-spinner-icon {
+        border-top-color: var(--color-accent) !important;
+        border-left-color: var(--color-accent) !important;
+    }
+}

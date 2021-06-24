@@ -1,0 +1,37 @@
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { RouterModule, Routes } from '@angular/router'
+import { NgProgressModule } from 'ngx-progressbar'
+import { NgProgressRouterModule } from 'ngx-progressbar/router'
+import { AppComponent } from './app.component'
+
+const routes: Routes = [
+    {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: '404',
+    },
+    {
+        path: ':code',
+        loadChildren: () => import('pages/error/error.module').then(m => m.ErrorModule),
+    },
+]
+
+@NgModule({
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        RouterModule.forRoot(routes),
+        NgProgressModule.withConfig({
+            speed: 250,
+            spinner: true,
+            thick: true,
+        }),
+        NgProgressRouterModule,
+    ],
+    declarations: [AppComponent],
+    providers: [],
+    bootstrap: [AppComponent],
+})
+export class AppModule {}

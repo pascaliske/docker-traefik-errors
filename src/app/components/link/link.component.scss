@@ -1,0 +1,34 @@
+:host {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-accent);
+    transition: color 0.2s;
+    text-decoration: none;
+    cursor: pointer;
+
+    &::after {
+        width: 0;
+        height: 1.5px;
+        position: absolute;
+        left: 50%;
+        bottom: -3px;
+        background-color: var(--color-accent);
+        transition: width 0.2s, left 0.2s;
+        transition-timing-function: ease-out;
+        content: ' ';
+    }
+
+    &:hover::after {
+        width: 100%;
+        left: 0;
+    }
+}
+
+.material-icons-outlined {
+    margin-right: 5px;
+}
+
+.cmp-link__label {
+    margin-right: 3px;
+}

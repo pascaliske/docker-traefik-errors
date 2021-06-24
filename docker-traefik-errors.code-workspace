@@ -1,0 +1,23 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "./src/app"
+        },
+        {
+            "path": "./src/app/components"
+        },
+        {
+            "path": "./src/app/pages"
+        },
+        {
+            "path": "./src/scss"
+        }
+    ],
+    "settings": {
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true
+    }
+}
