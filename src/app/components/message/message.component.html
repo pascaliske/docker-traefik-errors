@@ -1,4 +1,4 @@
 <ng-container *ngIf="code >= 400 && code <= 599">
     <span *ngIf="message.length > 0">{{ message }} — </span>
-    <a [label]="'Retry!'" (click)="retry()"></a>
+    <a [label]="'Retry!'" (click)="this.retry.emit()"></a>
 </ng-container>

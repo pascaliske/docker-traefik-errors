@@ -16,5 +16,5 @@ export class HeaderComponent {
         pluck('home'),
     )
 
-    public constructor(private route: ActivatedRoute) {}
+    public constructor(private readonly route: ActivatedRoute) {}
 }

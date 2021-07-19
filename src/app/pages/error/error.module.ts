@@ -7,12 +7,14 @@ import { CodeModule } from 'components/code/code.module'
 import { MessageModule } from 'components/message/message.module'
 import { IllustrationModule } from 'components/illustration/illustration.module'
 import { ErrorComponent } from './error.component'
+import { ValidCodeGuard } from './valid-code.guard'
 
 export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
         component: ErrorComponent,
+        canActivate: [ValidCodeGuard],
     },
 ]
 

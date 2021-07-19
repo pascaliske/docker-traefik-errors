@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core'
+import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core'
 import { getReasonPhrase, StatusCodes, ReasonPhrases } from 'http-status-codes'
 
 @Component({
@@ -10,6 +10,9 @@ import { getReasonPhrase, StatusCodes, ReasonPhrases } from 'http-status-codes'
 export class MessageComponent {
     @Input()
     public code: StatusCodes = StatusCodes.OK
+
+    @Output()
+    public retry: EventEmitter<void> = new EventEmitter()
 
     /**
      * Returns a reason phrase or error message based on the given status code.
@@ -47,9 +50,5 @@ export class MessageComponent {
 
         // default reason phrases
         return getReasonPhrase(this.code)
-    }
-
-    public retry(): void {
-        window.location.reload()
     }
 }
