@@ -26,5 +26,8 @@ COPY --from=builder /build/nginx.conf /etc/nginx/conf.d/default.conf
 # expose port
 EXPOSE 80
 
+# health check of error pages
+HEALTHCHECK CMD ["wget --no-verbose --tries=1 --spider http://localhost || exit 1"]
+
 # define entrypoint
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
