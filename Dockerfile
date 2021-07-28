@@ -35,7 +35,7 @@ COPY --from=builder /build/dist/docker-traefik-errors/browser /usr/share/nginx/h
 EXPOSE ${NGINX_PORT}
 
 # health check of error pages
-HEALTHCHECK CMD ["wget --no-verbose --tries=1 --spider http://localhost:${NGINX_PORT} || exit 1"]
+HEALTHCHECK CMD wget --no-verbose --tries=1 --spider http://localhost:${NGINX_PORT} || exit 1
 
 # define entrypoint & command
 ENTRYPOINT ["/entrypoint.sh"]
