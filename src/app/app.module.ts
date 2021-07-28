@@ -20,9 +20,9 @@ const routes: Routes = [
 
 @NgModule({
     imports: [
-        BrowserModule,
+        BrowserModule.withServerTransition({ appId: 'serverApp' }),
         BrowserAnimationsModule,
-        RouterModule.forRoot(routes),
+        RouterModule.forRoot(routes, { initialNavigation: 'enabled' }),
         NgProgressModule.withConfig({
             speed: 250,
             spinner: true,
