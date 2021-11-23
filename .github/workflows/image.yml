@@ -33,12 +33,20 @@ jobs:
           version: latest
           install: true
 
-      # login to docker
+      # login to docker hub
       - uses: docker/login-action@v1
         if: github.event_name != 'pull_request'
         with:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_TOKEN }}
+
+      # login to github container registry
+      - uses: docker/login-action@v1
+        if: github.event_name != 'pull_request'
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       # build & push image
       - uses: docker/build-push-action@v2
@@ -47,7 +55,9 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           platforms: ${{ env.PLATFORMS }}
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.image-name.outputs.image }}:latest
+          tags: |
+            ghcr.io/${{ steps.image-name.outputs.image }}:latest
+            ${{ steps.image-name.outputs.image }}:latest
 
       # output image digest
       - name: Output image digest

@@ -15,6 +15,7 @@ The easiest way to use the service is `docker-compose`:
 ```yaml
 version: '3.7'
 services:
+  # proxy
   traefik:
     image: traefik:latest
     container_name: traefik
@@ -27,8 +28,10 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /path/to/traefik/config:/etc/traefik
+
+  # custom error pages
   traefik-errors:
-    image: pascaliske/traefik-errors:latest
+    image: pascaliske/traefik-errors:latest # or: ghcr.io/pascaliske/traefik-errors:latest
     container_name: traefik-errors
     labels:
       - traefik.enable=true
@@ -36,6 +39,8 @@ services:
       - traefik.http.routers.traefik-errors.entrypoints=http
       - traefik.http.routers.traefik-errors.priority=1
       - traefik.http.routers.traefik-errors.middlewares=error-pages@file
+
+  # demo service
   whoami:
     image: traefik/whoami
     container_name: whoami
