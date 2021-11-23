@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Params } from '@angular/router'
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy'
-import { Observable, combineLatest, of } from 'rxjs'
+import { Observable, OperatorFunction, combineLatest, of } from 'rxjs'
 import { pluck, map, take, delay } from 'rxjs/operators'
 import { StatusCodes } from 'http-status-codes'
 import { animations } from './error.animations'
@@ -16,14 +16,14 @@ import { animations } from './error.animations'
 export class ErrorComponent {
     public code$: Observable<StatusCodes> = this.route.params.pipe(
         untilDestroyed(this),
-        pluck('code'),
+        pluck('code') as OperatorFunction<Params, string>,
         map<string, StatusCodes>(code => parseInt(code, 10)),
         take(1),
     )
 
     public retry$: Observable<string> = this.route.queryParams.pipe(
         untilDestroyed(this),
-        pluck('retry'),
+        pluck('retry') as OperatorFunction<Params, string>,
         take(1),
     )
 

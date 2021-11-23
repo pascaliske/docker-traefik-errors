@@ -10,7 +10,8 @@ COPY . /build
 RUN yarn install --frozen-lockfile --ignore-scripts
 
 # build & prerender
-RUN yarn run build && \
+RUN yarn run lint && \
+    yarn run build && \
     yarn run build:ssr && \
     yarn run prerender
 

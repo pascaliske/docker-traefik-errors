@@ -24,6 +24,7 @@
     "build": "ng build",
     "build:ssr": "ng run docker-traefik-errors:build-ssr",
     "prerender": "ng run docker-traefik-errors:prerender --no-guess-routes",
+    "lint": "ng lint",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,scss,html,md,mdx,json}\"",
     "version": "bump --yes package.json",
     "changelog": "standard-changelog"
