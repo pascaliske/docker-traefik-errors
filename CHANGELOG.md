@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/pascaliske/docker-traefik-errors/compare/v1.0.0...v1.0.1) (2021-11-26)
+
+
+### Bug Fixes
+
+* **error:** use angular document injectable instead of window global ([d9a3f5e](https://github.com/pascaliske/docker-traefik-errors/commit/d9a3f5e2822ee9f737b82a76f1f611ff69cbc88c))
+
+
+
 # [1.0.0](https://github.com/pascaliske/docker-traefik-errors/compare/v0.0.1...v1.0.0) (2021-11-26)
 
 
