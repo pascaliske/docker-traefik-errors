@@ -8,12 +8,7 @@ import { AppComponent } from './app.component'
 
 const routes: Routes = [
     {
-        path: '',
-        pathMatch: 'full',
-        redirectTo: '404',
-    },
-    {
-        path: ':code',
+        path: '**',
         loadChildren: () => import('pages/error/error.module').then(m => m.ErrorModule),
     },
 ]
@@ -23,15 +18,10 @@ const routes: Routes = [
         BrowserModule.withServerTransition({ appId: 'serverApp' }),
         BrowserAnimationsModule,
         RouterModule.forRoot(routes, { initialNavigation: 'enabled' }),
-        NgProgressModule.withConfig({
-            speed: 250,
-            spinner: true,
-            thick: true,
-        }),
+        NgProgressModule.withConfig({ speed: 250, spinner: true, thick: true }),
         NgProgressRouterModule,
     ],
     declarations: [AppComponent],
-    providers: [],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

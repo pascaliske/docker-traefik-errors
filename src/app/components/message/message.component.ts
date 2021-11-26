@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core'
-import { getReasonPhrase, StatusCodes, ReasonPhrases } from 'http-status-codes'
+import { StatusCodes, ReasonPhrases, getReasonPhrase } from 'http-status-codes'
 
 @Component({
     selector: 'cmp-message',
@@ -13,6 +13,13 @@ export class MessageComponent {
 
     @Output()
     public retry: EventEmitter<void> = new EventEmitter()
+
+    /**
+     * Only show message if the status code is between 400 and 599.
+     */
+    public get show(): boolean {
+        return this.code >= 400 && this.code <= 599
+    }
 
     /**
      * Returns a reason phrase or error message based on the given status code.

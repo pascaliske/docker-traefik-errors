@@ -14,7 +14,7 @@ import { animations } from './error.animations'
     animations,
 })
 export class ErrorComponent {
-    public code$: Observable<StatusCodes> = this.route.params.pipe(
+    public code$: Observable<StatusCodes> = this.route.queryParams.pipe(
         untilDestroyed(this),
         pluck('code') as OperatorFunction<Params, string>,
         map<string, StatusCodes>(code => parseInt(code, 10)),
@@ -37,7 +37,13 @@ export class ErrorComponent {
         combineLatest([this.retry$, of(window.location.href)])
             .pipe(untilDestroyed(this), take(1))
             .subscribe(([param, current]) => {
-                window.location.href = param ? param : current
+                // prepare retry url
+                const retry = new URL(param ? param : current)
+                retry.searchParams.delete('code')
+                retry.searchParams.delete('retry')
+
+                // retry current navigation
+                window.location.href = retry.toString()
             })
     }
 }

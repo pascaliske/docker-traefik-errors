@@ -61,7 +61,7 @@ http:
     error-pages:
       errors:
         service: traefik-errors
-        query: "/{status}?home=domain.tld" # home parameter is optional
+        query: "/?code={status}&home=domain.tld" # home parameter is optional
         status:
           - 400-599
 ```
