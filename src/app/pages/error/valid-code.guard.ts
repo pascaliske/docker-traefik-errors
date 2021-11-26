@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core'
+import { Injectable, Inject } from '@angular/core'
+import { DOCUMENT } from '@angular/common'
 import { CanActivate, Router, ActivatedRouteSnapshot, UrlTree } from '@angular/router'
 import { StatusCodes } from 'http-status-codes'
 
@@ -6,7 +7,10 @@ import { StatusCodes } from 'http-status-codes'
     providedIn: 'root',
 })
 export class ValidCodeGuard implements CanActivate {
-    public constructor(private readonly router: Router) {}
+    public constructor(
+        @Inject(DOCUMENT) private readonly document: Document,
+        private readonly router: Router,
+    ) {}
 
     /**
      * Checks if the current route has a valid status code appended to it.
@@ -20,11 +24,11 @@ export class ValidCodeGuard implements CanActivate {
             console.info(`No valid error code found, redirecting to ${StatusCodes.NOT_FOUND}.`)
 
             // redirect to 404 if not valid
-            return this.router.createUrlTree([window?.location?.pathname ?? '/'], {
+            return this.router.createUrlTree([this.document.location?.pathname ?? '/'], {
                 queryParams: {
                     code: StatusCodes.NOT_FOUND,
                     home: route?.queryParams.home,
-                    retry: window?.location?.href,
+                    retry: this.document.location?.href,
                 },
             })
         }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core'
+import { Component, Inject } from '@angular/core'
+import { DOCUMENT } from '@angular/common'
 import { ActivatedRoute, Params } from '@angular/router'
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy'
 import { Observable, OperatorFunction, combineLatest, of } from 'rxjs'
@@ -31,10 +32,13 @@ export class ErrorComponent {
 
     public illustration$: Observable<StatusCodes> = this.code$.pipe(delay(600))
 
-    public constructor(private readonly route: ActivatedRoute) {}
+    public constructor(
+        @Inject(DOCUMENT) private readonly document: Document,
+        private readonly route: ActivatedRoute,
+    ) {}
 
     public retry(): void {
-        combineLatest([this.retry$, of(window.location.href)])
+        combineLatest([this.retry$, of(this.document.location.href)])
             .pipe(untilDestroyed(this), take(1))
             .subscribe(([param, current]) => {
                 // prepare retry url
@@ -43,7 +47,7 @@ export class ErrorComponent {
                 retry.searchParams.delete('retry')
 
                 // retry current navigation
-                window.location.href = retry.toString()
+                this.document.location.href = retry.toString()
             })
     }
 }
