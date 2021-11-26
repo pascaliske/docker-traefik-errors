@@ -35,6 +35,9 @@ COPY --from=builder /build/dist/docker-traefik-errors/browser /usr/share/nginx/h
 # expose port
 EXPOSE ${NGINX_PORT}
 
+# expose access logs
+VOLUME /var/log/nginx
+
 # health check of error pages
 HEALTHCHECK CMD wget --no-verbose --tries=1 --spider http://localhost:${NGINX_PORT} || exit 1
 
