@@ -1,3 +1,13 @@
+# [1.0.0](https://github.com/pascaliske/docker-traefik-errors/compare/v0.0.1...v1.0.0) (2021-11-26)
+
+
+### Bug Fixes
+
+* **app:** use query parameter for error code to prevent angular router navigations ([90c1995](https://github.com/pascaliske/docker-traefik-errors/commit/90c199533d5b9af97646908fae78b972cbb58474))
+* **nginx:** move access log to file to prevent flooding container logs ([38078ad](https://github.com/pascaliske/docker-traefik-errors/commit/38078adf5a23061f5f002f0e120798f133596097))
+
+
+
 ## 0.0.1 (2021-11-23)
 
 
