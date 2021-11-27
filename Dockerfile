@@ -1,13 +1,25 @@
+# dependencies image
+FROM --platform=${BUILDPLATFORM} node:16-alpine AS dependencies
+LABEL maintainer="info@pascaliske.dev"
+WORKDIR /build
+
+# copy sources
+COPY package.json /build
+COPY yarn.lock /build
+
+# install dependencies
+RUN yarn install --frozen-lockfile --ignore-scripts
+
 # builder image
 FROM --platform=${BUILDPLATFORM} node:16-alpine AS builder
 LABEL maintainer="info@pascaliske.dev"
 WORKDIR /build
 
+# copy dependencies
+COPY --from=dependencies /build/node_modules /build/node_modules
+
 # copy sources
 COPY . /build
-
-# install dependencies
-RUN yarn install --frozen-lockfile --ignore-scripts
 
 # build & prerender
 RUN yarn run lint && \
