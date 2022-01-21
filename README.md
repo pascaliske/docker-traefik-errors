@@ -31,7 +31,7 @@ services:
 
   # custom error pages
   traefik-errors:
-    image: pascaliske/traefik-errors:latest # or: ghcr.io/pascaliske/traefik-errors:latest
+    image: ghcr.io/pascaliske/traefik-errors:latest # or: pascaliske/traefik-errors:latest
     container_name: traefik-errors
     labels:
       - traefik.enable=true
