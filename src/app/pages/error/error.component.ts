@@ -3,7 +3,7 @@ import { DOCUMENT } from '@angular/common'
 import { ActivatedRoute, Params } from '@angular/router'
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy'
 import { Observable, OperatorFunction, combineLatest, of } from 'rxjs'
-import { pluck, map, take, delay } from 'rxjs/operators'
+import { pluck, map, filter, take, delay } from 'rxjs/operators'
 import { StatusCodes } from 'http-status-codes'
 import { animations } from './error.animations'
 
@@ -19,6 +19,7 @@ export class ErrorComponent {
         untilDestroyed(this),
         pluck('code') as OperatorFunction<Params, string>,
         map<string, StatusCodes>(code => parseInt(code, 10)),
+        filter(code => !isNaN(code)),
         take(1),
     )
 

@@ -19,16 +19,26 @@ export class ValidCodeGuard implements CanActivate {
      * @returns Returns true if the route has a valid status code appended to it.
      */
     public canActivate(route: ActivatedRouteSnapshot): boolean | UrlTree {
-        // checks if the code parameter is valid
-        if (!/^\d{3}$/.test((route?.queryParams?.code as string) ?? '')) {
+        // show empty error page if no code is present
+        if (route?.queryParamMap?.has('code') ?? false) {
+            return true
+        }
+
+        // redirect to not found if no valid code is present
+        if (!/^\d{3}$/.test(route?.queryParamMap?.get('code') ?? '')) {
             console.info(`No valid error code found, redirecting to ${StatusCodes.NOT_FOUND}.`)
+
+            // prepare retry url
+            const retry = new URL(this.document.location?.href ?? '')
+            retry.searchParams.delete('code')
+            retry.searchParams.delete('retry')
 
             // redirect to 404 if not valid
             return this.router.createUrlTree([this.document.location?.pathname ?? '/'], {
                 queryParams: {
                     code: StatusCodes.NOT_FOUND,
                     home: route?.queryParams.home,
-                    retry: this.document.location?.href,
+                    retry: retry.toString(),
                 },
             })
         }
