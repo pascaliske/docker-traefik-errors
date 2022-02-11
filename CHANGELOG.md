@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/pascaliske/docker-traefik-errors/compare/v1.0.2...v1.0.3) (2022-02-11)
+
+
+### Bug Fixes
+
+* only append retry url if current location is available ([a71b77e](https://github.com/pascaliske/docker-traefik-errors/commit/a71b77edfce56821c9dbdfc03251d62c4300e27a))
+
+
+
 ## [1.0.2](https://github.com/pascaliske/docker-traefik-errors/compare/v1.0.1...v1.0.2) (2022-02-11)
 
 
