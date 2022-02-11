@@ -1,3 +1,12 @@
+## [1.0.2](https://github.com/pascaliske/docker-traefik-errors/compare/v1.0.1...v1.0.2) (2022-02-11)
+
+
+### Bug Fixes
+
+* only redirect to 404 if invalid codes are present ([0c26c33](https://github.com/pascaliske/docker-traefik-errors/commit/0c26c33c168e2e67f80dc7529e7729fc3adab6c0))
+
+
+
 ## [1.0.1](https://github.com/pascaliske/docker-traefik-errors/compare/v1.0.0...v1.0.1) (2021-11-26)
 
 
