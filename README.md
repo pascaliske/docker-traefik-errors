@@ -66,6 +66,10 @@ http:
           - 400-599
 ```
 
+## Kubernetes
+
+If you want to use this tool inside of a Kubernetes cluster [check out my ready to deploy Helm chart](https://charts.pascaliske.dev/charts/traefik-errors/)!
+
 ## License
 
 [MIT](LICENSE.md) – © 2022 [Pascal Iske](https://pascaliske.dev)
