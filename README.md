@@ -1,4 +1,4 @@
-# `pascaliske/docker-traefik-errors`
+# [`pascaliske/docker-traefik-errors`](https://pascaliske.github.io/docker-traefik-errors/)
 
 > Custom error pages for your traefik installation.
 
