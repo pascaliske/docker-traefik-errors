@@ -4,6 +4,25 @@
 
 [![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/pascaliske/traefik-errors/latest?style=flat-square)](https://hub.docker.com/r/pascaliske/traefik-errors) [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/pascaliske/traefik-errors/latest?style=flat-square)](https://hub.docker.com/r/pascaliske/traefik-errors) [![Docker Pulls](https://img.shields.io/docker/pulls/pascaliske/traefik-errors?style=flat-square)](https://hub.docker.com/r/pascaliske/traefik-errors) [![GitHub Tag](https://img.shields.io/github/v/tag/pascaliske/docker-traefik-errors?style=flat-square)](https://github.com/pascaliske/docker-traefik-errors) [![Build Status](https://img.shields.io/github/workflow/status/pascaliske/docker-traefik-errors/Image/master?label=build&style=flat-square)](https://github.com/pascaliske/docker-traefik-errors/actions) [![GitHub Last Commit](https://img.shields.io/github/last-commit/pascaliske/docker-traefik-errors?style=flat-square)](https://github.com/pascaliske/docker-traefik-errors) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg?style=flat-square)](https://github.com/Naereen/badges)
 
+## Image
+
+| Registry   | Image                                                                                                                             |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Docker Hub | [`pascaliske/traefik-errors`](https://hub.docker.com/r/pascaliske/traefik-errors)                                           |
+| GitHub     | [`ghcr.io/pascaliske/traefik-errors`](https://github.com/pascaliske/docker-traefik-errors/pkgs/container/traefik-errors) |
+
+The following platforms are available for this image:
+
+```bash
+$ docker run --rm mplatform/mquery pascaliske/traefik-errors:latest
+Image: pascaliske/traefik-errors:latest
+ * Manifest List: Yes
+ * Supported platforms:
+   - linux/amd64
+   - linux/arm/v7
+   - linux/arm64
+```
+
 ## Usage
 
 To use the error pages you have to do these two steps:
