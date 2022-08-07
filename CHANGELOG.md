@@ -1,3 +1,12 @@
+## [1.0.4](https://github.com/pascaliske/docker-traefik-errors/compare/v1.0.3...v1.0.4) (2022-08-07)
+
+
+### Bug Fixes
+
+* **app:** replace deprecated value for initial navigation setting ([6ed598f](https://github.com/pascaliske/docker-traefik-errors/commit/6ed598fafb2965a612ca89cc9c6a62aa8e5085b0))
+
+
+
 ## [1.0.3](https://github.com/pascaliske/docker-traefik-errors/compare/v1.0.2...v1.0.3) (2022-02-11)
 
 
