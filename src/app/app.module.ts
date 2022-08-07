@@ -17,7 +17,7 @@ const routes: Routes = [
     imports: [
         BrowserModule.withServerTransition({ appId: 'serverApp' }),
         BrowserAnimationsModule,
-        RouterModule.forRoot(routes, { initialNavigation: 'enabled' }),
+        RouterModule.forRoot(routes, { initialNavigation: 'enabledBlocking' }),
         NgProgressModule.withConfig({ speed: 250, spinner: true, thick: true }),
         NgProgressRouterModule,
     ],
