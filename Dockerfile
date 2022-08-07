@@ -39,7 +39,7 @@ RUN rm -rf /usr/share/nginx/html/*
 
 # copy entrypoint & nginx
 COPY ./docker-entrypoint.sh /entrypoint.sh
-COPY --from=builder /build/nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
 # copy built app
 COPY --from=builder /build/dist/docker-traefik-errors/browser /usr/share/nginx/html
