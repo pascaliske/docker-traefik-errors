@@ -28,7 +28,7 @@ RUN yarn run lint && \
     yarn run prerender
 
 # final image
-FROM nginx:alpine
+FROM nginx:1.23-alpine
 LABEL maintainer="info@pascaliske.dev"
 
 # environment
