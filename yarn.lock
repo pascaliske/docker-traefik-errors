@@ -36,20 +36,12 @@
     "@angular-devkit/core" "14.2.1"
     rxjs "6.6.7"
 
-"@angular-devkit/architect@0.1402.2", "@angular-devkit/architect@>=0.1400.0 < 0.1500.0":
+"@angular-devkit/architect@0.1402.2", "@angular-devkit/architect@>=0.1400.0 < 0.1500.0", "@angular-devkit/architect@^0.1402.0":
   version "0.1402.2"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1402.2.tgz#174cd1c86d5c9493192dfa9c0c52b9191a728b2b"
   integrity sha512-ICcK7OKViMhLkj4btnH/8nv0wjxuKchT/LDN6jfb9gUYUuoon190q0/L/U6ORDwvmjD6sUTurStzOxjuiS0KIg==
   dependencies:
     "@angular-devkit/core" "14.2.2"
-    rxjs "6.6.7"
-
-"@angular-devkit/architect@^0.1401.0":
-  version "0.1401.3"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1401.3.tgz#ce1eb086c25051021a12fdf5a6c8351ca8f29443"
-  integrity sha512-DQvKfl8Q9c02jpGqZX1nOL4mAnRBU6BSqPlhi1q17ZrB8sQpYtDBb8Epn2DDq48l7SQVFnRg6Zgje9L1LObURg==
-  dependencies:
-    "@angular-devkit/core" "14.1.3"
     rxjs "6.6.7"
 
 "@angular-devkit/build-angular@^14.0.0", "@angular-devkit/build-angular@^14.2.2":
@@ -130,17 +122,6 @@
     "@angular-devkit/architect" "0.1402.2"
     rxjs "6.6.7"
 
-"@angular-devkit/core@14.1.3":
-  version "14.1.3"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-14.1.3.tgz#5dc9a7917bed82a02efc20a4847f5eb6a55b699b"
-  integrity sha512-YBxhRl7hKgirjcKeurfejVrIgmw31GcfKKCyQiIudoLCYjonnSMdDEx2y8BNMANvxe5YmuZsIYJtgVlqp3mMDg==
-  dependencies:
-    ajv "8.11.0"
-    ajv-formats "2.1.1"
-    jsonc-parser "3.1.0"
-    rxjs "6.6.7"
-    source-map "0.7.4"
-
 "@angular-devkit/core@14.2.1":
   version "14.2.1"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-14.2.1.tgz#7ce14efdb5fce687bb4f13bef03d4b67e971b22e"
@@ -152,7 +133,7 @@
     rxjs "6.6.7"
     source-map "0.7.4"
 
-"@angular-devkit/core@14.2.2", "@angular-devkit/core@^14.0.0", "@angular-devkit/core@^14.1.0":
+"@angular-devkit/core@14.2.2", "@angular-devkit/core@^14.0.0", "@angular-devkit/core@^14.2.0":
   version "14.2.2"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-14.2.2.tgz#d616ada7c9a0610454da47445e64520a0b34e400"
   integrity sha512-ofDhTmJqoAkmkJP0duwUaCxDBMxPlc+AWYwgs3rKKZeJBb0d+tchEXHXevD5bYbbRfXtnwM+Vye2XYHhA4nWAA==
@@ -1722,14 +1703,14 @@
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-14.2.2.tgz#f001cc7373e88c3540cfb069713ed48f889d1bc0"
   integrity sha512-mjHv5DPsK6QP/D4zi6Oc4gMEZGNYv6Hmw/xJ1ZZTjSxgKujmHx2keDLSJHZpoLtbHRr+FHfWNnPfPz9dWYrlYQ==
 
-"@nguniversal/builders@^14.1.0":
-  version "14.1.0"
-  resolved "https://registry.yarnpkg.com/@nguniversal/builders/-/builders-14.1.0.tgz#eaff401cfd2d9886fcf35d0f5f0b5518c77a5782"
-  integrity sha512-TOOV7P7+zJ2739Ty7BazV7V9q1sF+kiJmV3c3ZqXFeNoNG6CYtX52cAPM/OkuU9JFER/JNUtNBCDihEdQquI3Q==
+"@nguniversal/builders@^14.2.0":
+  version "14.2.0"
+  resolved "https://registry.yarnpkg.com/@nguniversal/builders/-/builders-14.2.0.tgz#8b0303fd615a0383304a1a6b437c6587116dd224"
+  integrity sha512-7rElvsL1OdLtYmn1zNwijga21KhDtjkhuM2o2Mwqafiud3a4zfxzmdv/hOAvFapVTlpUYgb+m4pBwq7V4DYiUA==
   dependencies:
-    "@angular-devkit/architect" "^0.1401.0"
-    "@angular-devkit/core" "^14.1.0"
-    "@nguniversal/common" "14.1.0"
+    "@angular-devkit/architect" "^0.1402.0"
+    "@angular-devkit/core" "^14.2.0"
+    "@nguniversal/common" "14.2.0"
     browser-sync "^2.26.7"
     express "^4.17.1"
     guess-parser "^0.4.12"
@@ -1743,6 +1724,15 @@
   version "14.1.0"
   resolved "https://registry.yarnpkg.com/@nguniversal/common/-/common-14.1.0.tgz#77029fc0495695cae986b9e569763aa214acbb49"
   integrity sha512-h2GhKrrSIGHDhzhOcYy+MFiFIzl8MbRLs1FBLW3/YdbPpr2Cf5qDPMHIw/d8+FqDT5eHIoYGds35qGruoG4+GA==
+  dependencies:
+    critters "0.0.16"
+    jsdom "20.0.0"
+    tslib "^2.3.0"
+
+"@nguniversal/common@14.2.0":
+  version "14.2.0"
+  resolved "https://registry.yarnpkg.com/@nguniversal/common/-/common-14.2.0.tgz#03ba2a9f23465b978eb408e10cdcf445e9276820"
+  integrity sha512-6dpPSpCo6Kz4OrFa0RRFu8kmR6QDAEhwgTjD2MNU+WVf5ngwBAcakxW5/3bIx6A17et+Zr1/EVyhpyXFYSUjhw==
   dependencies:
     critters "0.0.16"
     jsdom "20.0.0"
