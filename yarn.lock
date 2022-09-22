@@ -149,7 +149,12 @@
   resolved "https://registry.yarnpkg.com/@angular-eslint/bundled-angular-compiler/-/bundled-angular-compiler-14.0.3.tgz#add784ef54664602ed3f6dc1b658e64ce87effa2"
   integrity sha512-1JMdb5IrgFH+bxY8ZYXyNyu31+BELbahGKOi+jX0ZyZgGA8nbukzjL+QVNwwaw1RNuyiCxZzCwA/tRSGJMqSYA==
 
-"@angular-eslint/eslint-plugin-template@14.0.3", "@angular-eslint/eslint-plugin-template@^14.0.3":
+"@angular-eslint/bundled-angular-compiler@14.1.2":
+  version "14.1.2"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/bundled-angular-compiler/-/bundled-angular-compiler-14.1.2.tgz#9a4895326221cf0ccdc189a776c89bfb6ffc7522"
+  integrity sha512-d5/jTKXP+t9hNSucj3m8zZYBl62fZ2xFMVNbAOArYAkA7WwwX3D7Gae57BNW54cd2fl2/is7Dn6UgYhu1wqkSQ==
+
+"@angular-eslint/eslint-plugin-template@14.0.3":
   version "14.0.3"
   resolved "https://registry.yarnpkg.com/@angular-eslint/eslint-plugin-template/-/eslint-plugin-template-14.0.3.tgz#3616649bbd8fbfb77a96298ea358667b3bdf28ce"
   integrity sha512-0m1dShhn6NVReBABecBn8UnMRidc61s3SGQIJWCkDBIeLOD+qVVaxZo04uNDNrXZhHWHqHAVIEBjG+qK2Xq6Nw==
@@ -157,6 +162,17 @@
     "@angular-eslint/bundled-angular-compiler" "14.0.3"
     "@typescript-eslint/utils" "5.29.0"
     aria-query "5.0.0"
+    axobject-query "3.0.1"
+
+"@angular-eslint/eslint-plugin-template@^14.1.2":
+  version "14.1.2"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/eslint-plugin-template/-/eslint-plugin-template-14.1.2.tgz#528dcfdd038bc4d186f879bb069a03b0ad8ad7a2"
+  integrity sha512-gMgYJ8ZwPvq2H/YEzPztVRAK2NYs2cJFUDZD4iGjSRtDgYq9OHjyTo+r6tkcyjcK2qvesy0RccHQKh+x3hYMTA==
+  dependencies:
+    "@angular-eslint/bundled-angular-compiler" "14.1.2"
+    "@typescript-eslint/type-utils" "5.37.0"
+    "@typescript-eslint/utils" "5.37.0"
+    aria-query "5.0.2"
     axobject-query "3.0.1"
 
 "@angular-eslint/eslint-plugin@14.0.3", "@angular-eslint/eslint-plugin@^14.0.3":
@@ -2599,6 +2615,11 @@ aria-query@5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/aria-query/-/aria-query-5.0.0.tgz#210c21aaf469613ee8c9a62c7f86525e058db52c"
   integrity sha512-V+SM7AbUwJ+EBnB8+DXs0hPZHO0W6pqBcc0dW90OwtVG02PswOu/teuARoLQjdDOH+t9pJgGnW5/Qmouf3gPJg==
+
+aria-query@5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/aria-query/-/aria-query-5.0.2.tgz#0b8a744295271861e1d933f8feca13f9b70cfdc1"
+  integrity sha512-eigU3vhqSO+Z8BKDnVLN/ompjhf3pYzecKXz8+whRy+9gZu8n1TCGfwzQUUPnqdHl9ax1Hr9031orZ+UOEYr7Q==
 
 array-find-index@^1.0.1:
   version "1.0.2"
