@@ -1,3 +1,13 @@
+## [1.0.5](https://github.com/pascaliske/docker-traefik-errors/compare/v1.0.4...v1.0.5) (2022-09-28)
+
+
+### Bug Fixes
+
+* **docker:** downgrade to node lts version due to bug with prerendering ([364732f](https://github.com/pascaliske/docker-traefik-errors/commit/364732fb81d935f83614b6a5ff499f12fe08ebbe))
+* **docker:** pin base image to exact version ([63023cd](https://github.com/pascaliske/docker-traefik-errors/commit/63023cdcbbf7c48334bd83a16830a1c5cac28e19))
+
+
+
 ## [1.0.4](https://github.com/pascaliske/docker-traefik-errors/compare/v1.0.3...v1.0.4) (2022-08-07)
 
 
