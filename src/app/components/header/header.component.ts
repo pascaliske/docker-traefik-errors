@@ -2,7 +2,7 @@ import { Component } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy'
 import { Observable } from 'rxjs'
-import { pluck } from 'rxjs/operators'
+import { map } from 'rxjs/operators'
 
 @UntilDestroy()
 @Component({
@@ -13,7 +13,7 @@ import { pluck } from 'rxjs/operators'
 export class HeaderComponent {
     public home$: Observable<string> = this.route.queryParams.pipe(
         untilDestroyed(this),
-        pluck('home'),
+        map(params => params?.home),
     )
 
     public constructor(private readonly route: ActivatedRoute) {}
