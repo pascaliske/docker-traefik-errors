@@ -62,7 +62,7 @@
     "@angular-eslint/template-parser": "^14.1.2",
     "@angular/cli": "^14.2.7",
     "@angular/compiler-cli": "^14.2.3",
-    "@commitlint/cli": "^17.1.2",
+    "@commitlint/cli": "^17.2.0",
     "@commitlint/config-conventional": "^17.1.0",
     "@nguniversal/builders": "^14.2.0",
     "@pascaliske/eslint-config": "^2.0.6",
