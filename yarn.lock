@@ -1722,21 +1722,21 @@
     jsdom "20.0.0"
     tslib "^2.3.0"
 
-"@nguniversal/common@14.2.2":
-  version "14.2.2"
-  resolved "https://registry.yarnpkg.com/@nguniversal/common/-/common-14.2.2.tgz#f9df5e7ae53932fc6120daf895979b9698b237f0"
-  integrity sha512-Aa2T2dywU6NJKOFcDn4Bfzlqr/fQoGT9LfQukUcSQl+gaOWSuCf56GGW979pEPX410zODJadn3mbs33/Fs/a3A==
+"@nguniversal/common@14.2.3":
+  version "14.2.3"
+  resolved "https://registry.yarnpkg.com/@nguniversal/common/-/common-14.2.3.tgz#69ecc7a6c576e1efa6733d565a5906757ec8d424"
+  integrity sha512-FWoZY+DZCNw24tNnnWkgTpNAlshkfiaxiT7V+fx2WFpY0LNXLWk45+hWhl4+wFEknOXr/DT/oU1m/RjR6FgXZQ==
   dependencies:
     critters "0.0.16"
     jsdom "20.0.0"
     tslib "^2.3.0"
 
-"@nguniversal/express-engine@14.2.2":
-  version "14.2.2"
-  resolved "https://registry.yarnpkg.com/@nguniversal/express-engine/-/express-engine-14.2.2.tgz#dcefc4c281aafeb72ea44cec9fbba5ec2647d75b"
-  integrity sha512-bn+tHctxsJeOdetWth7fNnfOVfOKoXdsFbnXYVX+a41JMpI15kiX09yHPQVG2ZyoHAnY10JJPQJfPMP3M2g6ug==
+"@nguniversal/express-engine@14.2.3":
+  version "14.2.3"
+  resolved "https://registry.yarnpkg.com/@nguniversal/express-engine/-/express-engine-14.2.3.tgz#f35f7a6afb67d0acc555d29a96f575475ceb402f"
+  integrity sha512-8G60LgQViz7caJbmL5f0Cw3mUtchVOiLUf9q1PKKhPVYMv9PVs1roKWuq1yAd4ZVMztBo93gyPt8vQGOo+C9WA==
   dependencies:
-    "@nguniversal/common" "14.2.2"
+    "@nguniversal/common" "14.2.3"
     tslib "^2.3.0"
 
 "@nodelib/fs.scandir@2.1.5":
