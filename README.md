@@ -91,4 +91,4 @@ If you want to use this tool inside of a Kubernetes cluster [check out my ready 
 
 ## License
 
-[MIT](LICENSE.md) – © 2022 [Pascal Iske](https://pascaliske.dev)
+[MIT](LICENSE.md) – © 2023 [Pascal Iske](https://pascaliske.dev)
