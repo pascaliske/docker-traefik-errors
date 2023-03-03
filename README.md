@@ -87,7 +87,7 @@ http:
 
 ## Kubernetes
 
-If you want to use this tool inside of a Kubernetes cluster [check out my ready to deploy Helm chart](https://charts.pascaliske.dev/charts/traefik-errors/)!
+If you want to use this tool inside of a Kubernetes cluster [check out my ready to deploy Helm chart](https://charts.pascaliske.dev/charts/traefik-errors/?utm_source=GitHub&utm_medium=Repository&utm_campaign=docker-traefik-errors)!
 
 ## License
 
