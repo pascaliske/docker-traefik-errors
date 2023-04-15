@@ -1,3 +1,20 @@
+## [1.0.6](https://github.com/pascaliske/docker-traefik-errors/compare/v1.0.5...v1.0.6) (2023-04-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @nguniversal/express-engine to v14.2.1 ([aa523da](https://github.com/pascaliske/docker-traefik-errors/commit/aa523da62989bb7cf103e4990f6fcb2cf5b32fa8))
+* **deps:** update dependency @nguniversal/express-engine to v14.2.2 ([27717a4](https://github.com/pascaliske/docker-traefik-errors/commit/27717a4b178980626561432feaaebc15e2dcfbcd))
+* **deps:** update dependency @nguniversal/express-engine to v15.2.0 ([d58bd9e](https://github.com/pascaliske/docker-traefik-errors/commit/d58bd9e3872d37c5764d5bb16b8450071287844b))
+* **deps:** update dependency @nguniversal/express-engine to v15.2.1 ([c068023](https://github.com/pascaliske/docker-traefik-errors/commit/c068023b590d526aed245d0168afe1d32ec0176c))
+* **deps:** update dependency rxjs to ~7.6.0 ([7a59356](https://github.com/pascaliske/docker-traefik-errors/commit/7a593565307b4ce21035333c2b775308da65cdf6))
+* **deps:** update dependency rxjs to ~7.8.0 ([958b562](https://github.com/pascaliske/docker-traefik-errors/commit/958b56200a4347867423eabb71a6bbd0b5f772b5))
+* **deps:** update dependency zone.js to ~0.12.0 ([27a644e](https://github.com/pascaliske/docker-traefik-errors/commit/27a644eb3fed62df9841770417f1847c76f09863))
+* **deps:** update dependency zone.js to ~0.13.0 ([890318b](https://github.com/pascaliske/docker-traefik-errors/commit/890318b773463fe5d89fd957e3902282f08a2ca2))
+* replace deprecated pluck operator with map ([9d04c18](https://github.com/pascaliske/docker-traefik-errors/commit/9d04c181007a1a71d3dbb585dad3626df54bbbc6))
+
+
+
 ## [1.0.5](https://github.com/pascaliske/docker-traefik-errors/compare/v1.0.4...v1.0.5) (2022-09-28)
 
 
