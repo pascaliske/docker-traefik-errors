@@ -64,7 +64,7 @@
     "@angular/compiler-cli": "^15.1.1",
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
-    "@nguniversal/builders": "^15.1.0",
+    "@nguniversal/builders": "^16.0.0",
     "@pascaliske/eslint-config": "^2.0.6",
     "@pascaliske/prettier-config": "^1.2.0",
     "@rstacruz/bump-cli": "^2.0.1",
