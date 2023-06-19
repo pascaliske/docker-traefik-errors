@@ -1,3 +1,17 @@
+# [1.1.0](https://github.com/pascaliske/docker-traefik-errors/compare/v1.0.6...v1.1.0) (2023-06-19)
+
+
+### Bug Fixes
+
+* **error:** use default error code of 404 if now error code was provided ([d2009fb](https://github.com/pascaliske/docker-traefik-errors/commit/d2009fb5fd1f484008daa7f1d59df867e7d6e2c8))
+
+
+### Features
+
+* upgrade angular to v16 ([1648d77](https://github.com/pascaliske/docker-traefik-errors/commit/1648d77b3a2ef63feefc45a55145c9b838a3ecbf))
+
+
+
 ## [1.0.6](https://github.com/pascaliske/docker-traefik-errors/compare/v1.0.5...v1.0.6) (2023-04-15)
 
 

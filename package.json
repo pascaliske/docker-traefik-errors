@@ -1,7 +1,7 @@
 {
   "name": "docker-traefik-errors",
   "description": "",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "license": "MIT",
   "author": {
     "name": "Pascal Iske",
