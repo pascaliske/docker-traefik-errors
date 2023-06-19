@@ -9,8 +9,4 @@ module.exports = {
         browser: true,
         node: true,
     },
-    globals: {
-        APP_ID: 'readonly',
-        APP_VERSION: 'readonly',
-    },
 }

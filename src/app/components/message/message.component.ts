@@ -1,11 +1,15 @@
 import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core'
+import { CommonModule } from '@angular/common'
 import { StatusCodes, ReasonPhrases, getReasonPhrase } from 'http-status-codes'
+import { LinkComponent } from 'components/link/link.component'
 
 @Component({
+    standalone: true,
     selector: 'cmp-message',
     templateUrl: './message.component.html',
     styleUrls: ['./message.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [CommonModule, LinkComponent],
 })
 export class MessageComponent {
     @Input()

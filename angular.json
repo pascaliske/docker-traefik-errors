@@ -52,7 +52,7 @@
       "prefix": "cmp",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/docker-traefik-errors/browser",
             "index": "src/index.html",
@@ -64,9 +64,6 @@
             "scripts": [],
             "stylePreprocessorOptions": {
               "includePaths": ["src/scss"]
-            },
-            "customWebpackConfig": {
-              "path": "webpack.config.ts"
             }
           },
           "configurations": {
@@ -124,6 +121,7 @@
             },
             "development": {
               "optimization": false,
+              "buildOptimizer": false,
               "sourceMap": true,
               "extractLicenses": false,
               "vendorChunk": true
@@ -132,7 +130,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
               "browserTarget": "docker-traefik-errors:build:production"

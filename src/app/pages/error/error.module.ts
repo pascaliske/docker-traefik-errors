@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterModule, Routes } from '@angular/router'
-import { HeaderModule } from 'components/header/header.module'
-import { LinkModule } from 'components/link/link.module'
-import { CodeModule } from 'components/code/code.module'
-import { MessageModule } from 'components/message/message.module'
-import { IllustrationModule } from 'components/illustration/illustration.module'
+import { HeaderComponent } from 'components/header/header.component'
+import { LinkComponent } from 'components/link/link.component'
+import { CodeComponent } from 'components/code/code.component'
+import { MessageComponent } from 'components/message/message.component'
+import { IllustrationComponent } from 'components/illustration/illustration.component'
 import { ErrorComponent } from './error.component'
 import { ValidCodeGuard } from './valid-code.guard'
 
@@ -14,7 +14,7 @@ export const routes: Routes = [
         path: '',
         pathMatch: 'full',
         component: ErrorComponent,
-        canActivate: [ValidCodeGuard],
+        canActivate: [ValidCodeGuard()],
     },
 ]
 
@@ -22,11 +22,11 @@ export const routes: Routes = [
     imports: [
         CommonModule,
         RouterModule.forChild(routes),
-        HeaderModule,
-        LinkModule,
-        CodeModule,
-        MessageModule,
-        IllustrationModule,
+        HeaderComponent,
+        LinkComponent,
+        CodeComponent,
+        MessageComponent,
+        IllustrationComponent,
     ],
     declarations: [ErrorComponent],
     exports: [ErrorComponent],
