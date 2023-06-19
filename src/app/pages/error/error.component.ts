@@ -16,7 +16,7 @@ import { animations } from './error.animations'
 export class ErrorComponent {
     public code$: Observable<StatusCodes> = this.route.queryParams.pipe(
         takeUntilDestroyed(),
-        map<Params, StatusCodes>(params => parseInt(params?.code as string, 10)),
+        map<Params, StatusCodes>(params => parseInt((params?.code ?? '404') as string, 10)),
         filter(code => !isNaN(code)),
         take(1),
     )
