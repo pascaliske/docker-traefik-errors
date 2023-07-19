@@ -22,7 +22,7 @@ export class MessageComponent {
      * Only show message if the status code is between 400 and 599.
      */
     public get show(): boolean {
-        return this.code >= 400 && this.code <= 599
+        return this.code >= (400 as StatusCodes) && this.code <= (599 as StatusCodes)
     }
 
     /**
