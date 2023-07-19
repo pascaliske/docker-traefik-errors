@@ -1735,12 +1735,21 @@
     jsdom "22.1.0"
     tslib "^2.3.0"
 
-"@nguniversal/express-engine@16.1.0":
-  version "16.1.0"
-  resolved "https://registry.yarnpkg.com/@nguniversal/express-engine/-/express-engine-16.1.0.tgz#2b19ef48aef33de33c3a5bad62caf2e1c28cffb6"
-  integrity sha512-HCNzY3M+C8sibVjKYZoGpPAZldR3Wy7+8g8lvBc/Com/VbQYuqSzwcAjjZFceOZgkVjmX2D0eyhD2HVT890ybg==
+"@nguniversal/common@16.1.1":
+  version "16.1.1"
+  resolved "https://registry.yarnpkg.com/@nguniversal/common/-/common-16.1.1.tgz#16fc92b67c63007ee528d5b27a04903f725b0d0e"
+  integrity sha512-8Hj+hKXy34H0reSKRzgTQIJyajU8ZLu1wR7DrBwzrpC6yk9eH6jE+67j6TMfSR9uoKF5nfLaqmnJyUShxHj9tA==
   dependencies:
-    "@nguniversal/common" "16.1.0"
+    critters "0.0.19"
+    jsdom "22.1.0"
+    tslib "^2.3.0"
+
+"@nguniversal/express-engine@16.1.1":
+  version "16.1.1"
+  resolved "https://registry.yarnpkg.com/@nguniversal/express-engine/-/express-engine-16.1.1.tgz#e597e04421e4859cd61fc21f1d1ced0345948519"
+  integrity sha512-N2qWc2Vo3W5TryHtkHKw0d9Iz6a+E8XrB8kf6mAEKakWBIv86wwsRtJArrmf+Dnx75AfojO9hcVE915rjiLesA==
+  dependencies:
+    "@nguniversal/common" "16.1.1"
     tslib "^2.3.0"
 
 "@nodelib/fs.scandir@2.1.5":
@@ -3505,6 +3514,19 @@ critters@0.0.18:
   version "0.0.18"
   resolved "https://registry.yarnpkg.com/critters/-/critters-0.0.18.tgz#37ea730ee3a1f19844e8099c3fd75b526e1bbcc9"
   integrity sha512-I7t/da29EIWXgxx2RSW1md1DvenEgEuLlki6nHE5+Nc0e3eib5AuGIGbPVuI8q+erCKkSP9T/NqYfvasAy7x7A==
+  dependencies:
+    chalk "^4.1.0"
+    css-select "^5.1.0"
+    dom-serializer "^2.0.0"
+    domhandler "^5.0.2"
+    htmlparser2 "^8.0.2"
+    postcss "^8.4.23"
+    pretty-bytes "^5.3.0"
+
+critters@0.0.19:
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/critters/-/critters-0.0.19.tgz#15e3a3a0ed77ae4b69c3b2fe29c8e7e87fc77d1b"
+  integrity sha512-Fm4ZAXsG0VzWy1U30rP4qxbaWGSsqXDgSupJW1OUJGDAs0KWC+j37v7p5a2kZ9BPJvhRzWm3be+Hc9WvQOBUOw==
   dependencies:
     chalk "^4.1.0"
     css-select "^5.1.0"
