@@ -1735,21 +1735,21 @@
     jsdom "22.1.0"
     tslib "^2.3.0"
 
-"@nguniversal/common@16.1.2":
-  version "16.1.2"
-  resolved "https://registry.yarnpkg.com/@nguniversal/common/-/common-16.1.2.tgz#ccfc8f747bbf8cb6e9265047d3e5b0ab80a80a70"
-  integrity sha512-sNdcIsJePTMlpann0nQgWdiqs+JV8wclv5yGbCtHt7oQsd1qZNyRQhgX0E9115ghKA5nEAmd+/0N+9lT7UKLvA==
+"@nguniversal/common@16.2.0":
+  version "16.2.0"
+  resolved "https://registry.yarnpkg.com/@nguniversal/common/-/common-16.2.0.tgz#674a8ab85e707085f5b5b86cbe12ff1ed0a56442"
+  integrity sha512-b3dQAwD2iI2kzF3O1mhwh6bhDg1SlT46K9lOSzNZNXy0bvV4WrSpVmfN7YKINZLFal5uwHn4j1LNdrDR4Qohlw==
   dependencies:
     critters "0.0.20"
     jsdom "22.1.0"
     tslib "^2.3.0"
 
-"@nguniversal/express-engine@16.1.2":
-  version "16.1.2"
-  resolved "https://registry.yarnpkg.com/@nguniversal/express-engine/-/express-engine-16.1.2.tgz#43a9ea517c171362f1e8c59b5de9df8c72f37d20"
-  integrity sha512-Zkfe/OagKPUGzeOLkQ8WmG8QQxxynvUzLAMb105pT/4n3+qojTOWR4pVIpa1moxOKA2LgZ+JAyPltP/zlrPYKQ==
+"@nguniversal/express-engine@16.2.0":
+  version "16.2.0"
+  resolved "https://registry.yarnpkg.com/@nguniversal/express-engine/-/express-engine-16.2.0.tgz#d31720491b57bdf3a1c7622f2676821aaf8036b4"
+  integrity sha512-Pg77DfDvKtLzRUTahjv3WxWUldpNQTHIlyoU0wYrwoi/7qnHzoXdrvI1tqzC+DqPwxOmkGySoiRa2jJ+9IgvKw==
   dependencies:
-    "@nguniversal/common" "16.1.2"
+    "@nguniversal/common" "16.2.0"
     tslib "^2.3.0"
 
 "@nodelib/fs.scandir@2.1.5":
