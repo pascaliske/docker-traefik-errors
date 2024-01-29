@@ -17,7 +17,7 @@
   },
   "private": true,
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "start": "ng serve --ssl",
     "start:ssr": "ng run docker-traefik-errors:serve-ssr",
     "build": "ng build",
@@ -70,7 +70,7 @@
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "eslint": "^8.28.0",
-    "husky": "^8.0.3",
+    "husky": "^9.0.0",
     "prettier": "^3.0.0",
     "standard-changelog": "^5.0.0",
     "ts-node": "^10.9.1",
