@@ -1,8 +1,18 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
+import { Router, RouterOutlet } from '@angular/router'
+import { NgProgressModule } from 'ngx-progressbar'
 
 @Component({
+    standalone: true,
     selector: 'cmp-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
+    imports: [RouterOutlet, NgProgressModule],
 })
-export class AppComponent {}
+export class AppComponent implements OnInit {
+    public constructor(private readonly router: Router) {}
+
+    public ngOnInit(): void {
+        // delayed initial navigation
+        setTimeout(() => this.router.initialNavigation())
+    }
+}

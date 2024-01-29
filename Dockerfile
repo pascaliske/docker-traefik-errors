@@ -23,8 +23,6 @@ COPY . /build
 
 # build & prerender
 RUN yarn run lint && \
-    yarn run build && \
-    yarn run build:ssr && \
     yarn run prerender
 
 # final image

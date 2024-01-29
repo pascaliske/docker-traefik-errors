@@ -1,16 +1,32 @@
 import { Component, Inject } from '@angular/core'
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
-import { DOCUMENT } from '@angular/common'
-import { ActivatedRoute, Params } from '@angular/router'
+import { NgIf, AsyncPipe, DOCUMENT } from '@angular/common'
+import { RouterModule, ActivatedRoute, Params } from '@angular/router'
 import { Observable, combineLatest, of } from 'rxjs'
 import { map, filter, take, delay } from 'rxjs/operators'
 import { StatusCodes } from 'http-status-codes'
+import { HeaderComponent } from 'components/header/header.component'
+import { LinkComponent } from 'components/link/link.component'
+import { CodeComponent } from 'components/code/code.component'
+import { MessageComponent } from 'components/message/message.component'
+import { IllustrationComponent } from 'components/illustration/illustration.component'
 import { animations } from './error.animations'
 
 @Component({
+    standalone: true,
     selector: 'cmp-error',
     templateUrl: './error.component.html',
     styleUrls: ['./error.component.scss'],
+    imports: [
+        NgIf,
+        AsyncPipe,
+        RouterModule,
+        HeaderComponent,
+        LinkComponent,
+        CodeComponent,
+        MessageComponent,
+        IllustrationComponent,
+    ],
     animations,
 })
 export class ErrorComponent {

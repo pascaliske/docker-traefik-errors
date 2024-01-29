@@ -66,6 +66,7 @@
               "includePaths": ["src/scss"]
             }
           },
+          "defaultConfiguration": "production",
           "configurations": {
             "production": {
               "outputHashing": "all",
@@ -96,10 +97,21 @@
               "sourceMap": true,
               "namedChunks": true
             }
-          },
-          "defaultConfiguration": "production"
+          }
         },
-        "build-ssr": {
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "defaultConfiguration": "development",
+          "configurations": {
+            "production": {
+              "buildTarget": "docker-traefik-errors:build:production"
+            },
+            "development": {
+              "buildTarget": "docker-traefik-errors:build:development"
+            }
+          }
+        },
+        "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/docker-traefik-errors/server",
@@ -109,6 +121,7 @@
               "includePaths": ["src/scss"]
             }
           },
+          "defaultConfiguration": "production",
           "configurations": {
             "production": {
               "outputHashing": "media",
@@ -126,51 +139,25 @@
               "extractLicenses": false,
               "vendorChunk": true
             }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "configurations": {
-            "production": {
-              "browserTarget": "docker-traefik-errors:build:production"
-            },
-            "development": {
-              "browserTarget": "docker-traefik-errors:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
-          "configurations": {
-            "development": {
-              "browserTarget": "docker-traefik-errors:build:development",
-              "serverTarget": "docker-traefik-errors:build-ssr:development"
-            },
-            "production": {
-              "browserTarget": "docker-traefik-errors:build:production",
-              "serverTarget": "docker-traefik-errors:build-ssr:production"
-            }
-          },
-          "defaultConfiguration": "development"
+          }
         },
         "prerender": {
-          "builder": "@nguniversal/builders:prerender",
+          "builder": "@angular-devkit/build-angular:prerender",
           "options": {
-            "routes": ["/"]
+            "routes": ["/"],
+            "discoverRoutes": false
           },
+          "defaultConfiguration": "production",
           "configurations": {
             "production": {
               "browserTarget": "docker-traefik-errors:build:production",
-              "serverTarget": "docker-traefik-errors:build-ssr:production"
+              "serverTarget": "docker-traefik-errors:server:production"
             },
             "development": {
               "browserTarget": "docker-traefik-errors:build:development",
-              "serverTarget": "docker-traefik-errors:build-ssr:development"
+              "serverTarget": "docker-traefik-errors:server:development"
             }
-          },
-          "defaultConfiguration": "production"
+          }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
