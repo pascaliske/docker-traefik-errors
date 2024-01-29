@@ -17,7 +17,7 @@
   },
   "private": true,
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "start": "ng serve --ssl",
     "start:ssr": "ng run docker-traefik-errors:serve-ssr",
     "build": "ng build",
