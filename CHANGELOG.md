@@ -1,3 +1,20 @@
+# [1.2.0](https://github.com/pascaliske/docker-traefik-errors/compare/v1.1.0...v1.2.0) (2024-01-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @nguniversal/express-engine to v16.1.1 ([5ca9923](https://github.com/pascaliske/docker-traefik-errors/commit/5ca99239874371a6b06be5fd5de1a4bf55fb3382))
+* **deps:** update dependency @nguniversal/express-engine to v16.1.2 ([61ac216](https://github.com/pascaliske/docker-traefik-errors/commit/61ac216f1df2e1125b907b02e6481a3c1865c370))
+* **deps:** update dependency zone.js to ~0.14.0 ([5ac6493](https://github.com/pascaliske/docker-traefik-errors/commit/5ac64930999b5abab0cdcf0547b10c015a78cf9b))
+* **message:** cast comparative values as status codes ([423e0e2](https://github.com/pascaliske/docker-traefik-errors/commit/423e0e2c566a9c3c524580d639b488fcc8fb70a4))
+
+
+### Features
+
+* upgrade to angular v17 ([ed57f82](https://github.com/pascaliske/docker-traefik-errors/commit/ed57f82e621791bf87e0d76b04d78a7a4f70b5db))
+
+
+
 # [1.1.0](https://github.com/pascaliske/docker-traefik-errors/compare/v1.0.6...v1.1.0) (2023-06-19)
 
 
