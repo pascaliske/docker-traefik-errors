@@ -68,7 +68,7 @@
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
     "browser-sync": "^3.0.0",
-    "eslint": "^8.28.0",
+    "eslint": "^9.0.0",
     "husky": "^9.0.0",
     "prettier": "^3.0.0",
     "standard-changelog": "^5.0.0",
