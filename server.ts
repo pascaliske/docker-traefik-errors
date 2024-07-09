@@ -1,27 +1,23 @@
-import 'zone.js/node'
+import { fileURLToPath } from 'node:url'
+import { dirname, join, resolve } from 'node:path'
 import { APP_BASE_HREF } from '@angular/common'
 import { CommonEngine } from '@angular/ssr'
-import * as express from 'express'
-import { existsSync } from 'node:fs'
-import { join } from 'node:path'
+import express from 'express'
 import bootstrap from './src/main.server'
-
-export default bootstrap
 
 export function app(): express.Express {
     const commonEngine: CommonEngine = new CommonEngine()
     const server: express.Express = express()
-    const distFolder: string = join(process.cwd(), 'dist/docker-traefik-errors/browser')
-    const indexHtml: string = existsSync(join(distFolder, 'index.original.html'))
-        ? join(distFolder, 'index.original.html')
-        : join(distFolder, 'index.html')
+    const serverDistFolder = dirname(fileURLToPath(import.meta.url))
+    const browserDistFolder = resolve(serverDistFolder, '../browser')
+    const indexHtml = join(serverDistFolder, 'index.server.html')
 
     // prepare view engine
     server.set('view engine', 'html')
-    server.set('views', distFolder)
+    server.set('views', browserDistFolder)
 
     // serve static files
-    server.get('*.*', express.static(distFolder, { maxAge: '1y' }))
+    server.get('*.*', express.static(browserDistFolder, { maxAge: '1y' }))
 
     // serve app routes
     server.get('*', (req: express.Request, res: express.Response, next: express.NextFunction) => {
@@ -32,7 +28,7 @@ export function app(): express.Express {
                 bootstrap,
                 documentFilePath: indexHtml,
                 url: `${protocol}://${headers.host}${originalUrl}`,
-                publicPath: distFolder,
+                publicPath: browserDistFolder,
                 providers: [{ provide: APP_BASE_HREF, useValue: baseUrl }],
             })
             .then((html: string) => res.send(html))

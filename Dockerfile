@@ -1,4 +1,4 @@
-# dependencies image
+# --- dependencies image
 FROM --platform=${BUILDPLATFORM} node:20-alpine AS dependencies
 LABEL maintainer="info@pascaliske.dev"
 WORKDIR /build
@@ -22,10 +22,9 @@ COPY --from=dependencies /build/node_modules /build/node_modules
 COPY . /build
 
 # build & prerender
-RUN yarn run lint && \
-    yarn run prerender
+RUN yarn run build
 
-# final image
+# --- final image
 FROM nginx:1.25.4-alpine
 LABEL maintainer="info@pascaliske.dev"
 

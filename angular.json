@@ -3,6 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "cli": {
+    "schematicCollections": ["@angular-eslint/schematics"],
     "packageManager": "yarn"
   },
   "schematics": {
@@ -10,6 +11,7 @@
       "prefix": "cmp",
       "style": "scss",
       "skipTests": true,
+      "standalone": true,
       "export": true
     },
     "@schematics/angular:class": {
@@ -30,6 +32,9 @@
       "skipTests": true,
       "export": true
     },
+    "@schematics/angular:resolver": {
+      "skipTests": true
+    },
     "@schematics/angular:service": {
       "skipTests": true,
       "flat": false
@@ -46,19 +51,28 @@
   },
   "projects": {
     "docker-traefik-errors": {
-      "projectType": "application",
       "root": "",
       "sourceRoot": "src",
+      "projectType": "application",
       "prefix": "cmp",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist/docker-traefik-errors/browser",
+            "outputPath": {
+              "base": "dist/docker-traefik-errors"
+            },
             "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "browser": "src/main.ts",
+            "server": "src/main.server.ts",
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
+            "prerender": {
+              "routesFile": "routes.txt"
+            },
+            "ssr": {
+              "entry": "server.ts"
+            },
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/scss/styles.scss"],
             "scripts": [],
@@ -90,9 +104,7 @@
               ]
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
@@ -100,7 +112,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular/build:dev-server",
           "defaultConfiguration": "development",
           "configurations": {
             "production": {
@@ -108,54 +120,6 @@
             },
             "development": {
               "buildTarget": "docker-traefik-errors:build:development"
-            }
-          }
-        },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/docker-traefik-errors/server",
-            "main": "server.ts",
-            "tsConfig": "tsconfig.server.json",
-            "stylePreprocessorOptions": {
-              "includePaths": ["src/scss"]
-            }
-          },
-          "defaultConfiguration": "production",
-          "configurations": {
-            "production": {
-              "outputHashing": "media",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ]
-            },
-            "development": {
-              "optimization": false,
-              "buildOptimizer": false,
-              "sourceMap": true,
-              "extractLicenses": false,
-              "vendorChunk": true
-            }
-          }
-        },
-        "prerender": {
-          "builder": "@angular-devkit/build-angular:prerender",
-          "options": {
-            "routes": ["/"],
-            "discoverRoutes": false
-          },
-          "defaultConfiguration": "production",
-          "configurations": {
-            "production": {
-              "browserTarget": "docker-traefik-errors:build:production",
-              "serverTarget": "docker-traefik-errors:server:production"
-            },
-            "development": {
-              "browserTarget": "docker-traefik-errors:build:development",
-              "serverTarget": "docker-traefik-errors:server:development"
             }
           }
         },

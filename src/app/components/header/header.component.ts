@@ -14,9 +14,9 @@ import { LinkComponent } from 'components/link/link.component'
     imports: [CommonModule, LinkComponent],
 })
 export class HeaderComponent {
-    public home$: Observable<string> = this.route.queryParams.pipe(
+    public home$: Observable<string | null> = this.route.queryParamMap.pipe(
         takeUntilDestroyed(),
-        map(params => params?.home),
+        map(params => params.get('home')),
     )
 
     public constructor(private readonly route: ActivatedRoute) {}

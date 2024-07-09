@@ -46,7 +46,7 @@ export function ValidCodeGuard(): () => boolean | UrlTree {
             return router.createUrlTree([doc?.location?.pathname ?? '/'], {
                 queryParams: {
                     code: StatusCodes.NOT_FOUND,
-                    home: route?.snapshot?.queryParams.home,
+                    home: route?.snapshot?.queryParamMap.get('home'),
                     retry: buildRetryUrl(doc?.location?.href),
                 },
             })

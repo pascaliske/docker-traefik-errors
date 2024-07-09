@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core'
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
 import { NgIf, AsyncPipe, DOCUMENT } from '@angular/common'
-import { RouterModule, ActivatedRoute, Params } from '@angular/router'
+import { RouterModule, ActivatedRoute, ParamMap } from '@angular/router'
 import { Observable, combineLatest, of } from 'rxjs'
 import { map, filter, take, delay } from 'rxjs/operators'
 import { StatusCodes } from 'http-status-codes'
@@ -30,16 +30,16 @@ import { animations } from './error.animations'
     animations,
 })
 export class ErrorComponent {
-    public code$: Observable<StatusCodes> = this.route.queryParams.pipe(
+    public code$: Observable<StatusCodes> = this.route.queryParamMap.pipe(
         takeUntilDestroyed(),
-        map<Params, StatusCodes>(params => parseInt((params?.code ?? '404') as string, 10)),
+        map<ParamMap, StatusCodes>(params => parseInt((params.get('code') ?? '404'), 10)),
         filter(code => !isNaN(code)),
         take(1),
     )
 
-    public retry$: Observable<string> = this.route.queryParams.pipe(
+    public retry$: Observable<string> = this.route.queryParamMap.pipe(
         takeUntilDestroyed(),
-        map<Params, string>(params => params?.retry ?? ''),
+        map<ParamMap, string>(params => params.get('retry') ?? ''),
         take(1),
     )
 
