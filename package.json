@@ -28,6 +28,7 @@
     "changelog": "standard-changelog"
   },
   "prettier": "@pascaliske/prettier-config",
+  "packageManager": "yarn@1.22.22",
   "resolutions": {
     "ts-node": "^10.9.1"
   },
