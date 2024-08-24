@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core'
 import { Router, RouterOutlet } from '@angular/router'
-import { NgProgressModule } from 'ngx-progressbar'
+import { NgProgressbar } from 'ngx-progressbar'
+import { NgProgressRouter } from 'ngx-progressbar/router'
 
 @Component({
     standalone: true,
     selector: 'cmp-root',
     templateUrl: './app.component.html',
-    imports: [RouterOutlet, NgProgressModule],
+    imports: [RouterOutlet, NgProgressbar, NgProgressRouter],
 })
 export class AppComponent implements OnInit {
     public constructor(private readonly router: Router) {}
