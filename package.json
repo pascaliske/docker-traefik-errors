@@ -62,6 +62,6 @@
     "husky": "^9.1.5",
     "prettier": "^3.3.3",
     "standard-changelog": "^6.0.0",
-    "typescript": "~5.5.4"
+    "typescript": "~5.7.0"
   }
 }
