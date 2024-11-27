@@ -1,5 +1,3 @@
-@import 'utils/mixins';
-
 :host {
     width: 100%;
     height: 100%;
@@ -11,20 +9,20 @@ svg {
     max-width: 100vw;
     margin: var(--grid-gap);
 
-    @include use-breakpoint(xsmall) {
+    @media (min-width: 520px) {
         max-width: 60vw;
         margin: var(--grid-gap) auto;
     }
 
-    @include use-breakpoint(small) {
+    @media (min-width: 768px) {
         max-width: 45vw;
     }
 
-    @include use-breakpoint(medium) {
+    @media (min-width: 1024px) {
         max-width: 30vw;
     }
 
-    @include use-breakpoint(large) {
+    @media (min-width: 1280px) {
         max-width: initial;
         max-height: 100%;
         margin: 60px auto 0;

@@ -1,0 +1,40 @@
+:root {
+    --color-background: #2d333d;
+    --color-foreground: #fff;
+    --color-accent: #00dfbf;
+    --color-shadow: #373d48;
+
+    --grid-gap: 20px;
+    --header-height: 70px;
+
+    --ng-progress-color: var(--color-accent);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-background: #fff;
+        --color-foreground: #2d333d;
+        --color-shadow: #e2e2e2;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+    transition:
+        color 0.3s,
+        background-color 0.3s;
+}
