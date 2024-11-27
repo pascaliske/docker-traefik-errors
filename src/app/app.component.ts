@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core'
-import { Router, RouterOutlet } from '@angular/router'
+import { Component } from '@angular/core'
+import { RouterOutlet } from '@angular/router'
 import { NgProgressbar } from 'ngx-progressbar'
 import { NgProgressRouter } from 'ngx-progressbar/router'
 
@@ -8,11 +8,4 @@ import { NgProgressRouter } from 'ngx-progressbar/router'
     templateUrl: './app.component.html',
     imports: [RouterOutlet, NgProgressbar, NgProgressRouter],
 })
-export class AppComponent implements OnInit {
-    public constructor(private readonly router: Router) {}
-
-    public ngOnInit(): void {
-        // delayed initial navigation
-        setTimeout(() => this.router.initialNavigation())
-    }
-}
+export class AppComponent {}
