@@ -6,14 +6,12 @@ import { Observable, combineLatest, of } from 'rxjs'
 import { map, filter, take, delay } from 'rxjs/operators'
 import { StatusCodes } from 'http-status-codes'
 import { HeaderComponent } from 'components/header/header.component'
-import { LinkComponent } from 'components/link/link.component'
 import { CodeComponent } from 'components/code/code.component'
 import { MessageComponent } from 'components/message/message.component'
 import { IllustrationComponent } from 'components/illustration/illustration.component'
 import { animations } from './error.animations'
 
 @Component({
-    standalone: true,
     selector: 'cmp-error',
     templateUrl: './error.component.html',
     styleUrls: ['./error.component.scss'],
@@ -22,17 +20,16 @@ import { animations } from './error.animations'
         AsyncPipe,
         RouterModule,
         HeaderComponent,
-        LinkComponent,
         CodeComponent,
         MessageComponent,
         IllustrationComponent,
     ],
     animations,
 })
-export class ErrorComponent {
+export default class ErrorComponent {
     public code$: Observable<StatusCodes> = this.route.queryParamMap.pipe(
         takeUntilDestroyed(),
-        map<ParamMap, StatusCodes>(params => parseInt((params.get('code') ?? '404'), 10)),
+        map<ParamMap, StatusCodes>(params => parseInt(params.get('code') ?? '404', 10)),
         filter(code => !isNaN(code)),
         take(1),
     )

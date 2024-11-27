@@ -1,6 +1,6 @@
-<ng-container *ngIf="label; else content">
-    <span class="material-icons-outlined" *ngIf="icon">{{ icon }}</span>
-    <span class="cmp-link__label">{{ label }}</span>
+<ng-container *ngIf="label(); else content">
+    <span class="material-icons-outlined" *ngIf="icon()">{{ icon() }}</span>
+    <span class="cmp-link__label">{{ label() }}</span>
 </ng-container>
 <ng-template #content>
     <ng-container></ng-container>

@@ -6,9 +6,9 @@
 
 ## Image
 
-| Registry   | Image                                                                                                                             |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Docker Hub | [`pascaliske/traefik-errors`](https://hub.docker.com/r/pascaliske/traefik-errors)                                           |
+| Registry   | Image                                                                                                                    |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Docker Hub | [`pascaliske/traefik-errors`](https://hub.docker.com/r/pascaliske/traefik-errors)                                        |
 | GitHub     | [`ghcr.io/pascaliske/traefik-errors`](https://github.com/pascaliske/docker-traefik-errors/pkgs/container/traefik-errors) |
 
 The following platforms are available for this image:

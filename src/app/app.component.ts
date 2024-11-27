@@ -4,7 +4,6 @@ import { NgProgressbar } from 'ngx-progressbar'
 import { NgProgressRouter } from 'ngx-progressbar/router'
 
 @Component({
-    standalone: true,
     selector: 'cmp-root',
     templateUrl: './app.component.html',
     imports: [RouterOutlet, NgProgressbar, NgProgressRouter],

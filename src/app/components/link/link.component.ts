@@ -1,18 +1,15 @@
-import { Component, Input } from '@angular/core'
-import { CommonModule } from '@angular/common'
+import { Component, input } from '@angular/core'
+import { NgIf } from '@angular/common'
 
 @Component({
-    standalone: true,
     // eslint-disable-next-line @angular-eslint/component-selector
     selector: 'a',
     templateUrl: './link.component.html',
     styleUrls: ['./link.component.scss'],
-    imports: [CommonModule],
+    imports: [NgIf],
 })
 export class LinkComponent {
-    @Input()
-    public label: string | undefined
+    public readonly label = input<string>()
 
-    @Input()
-    public icon: string | undefined
+    public readonly icon = input<string>()
 }

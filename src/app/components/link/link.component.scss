@@ -14,7 +14,9 @@
         left: 50%;
         bottom: -3px;
         background-color: var(--color-accent);
-        transition: width 0.2s, left 0.2s;
+        transition:
+            width 0.2s,
+            left 0.2s;
         transition-timing-function: ease-out;
         content: ' ';
     }

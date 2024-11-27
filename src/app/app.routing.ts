@@ -14,6 +14,6 @@ export const routes: Routes = [
     {
         path: '**',
         canActivate: [ValidCodeGuard()],
-        loadComponent: () => import('pages/error/error.component').then(m => m.ErrorComponent),
+        loadComponent: () => import('pages/error/error.component'),
     },
 ]

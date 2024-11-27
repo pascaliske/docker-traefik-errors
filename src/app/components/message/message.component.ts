@@ -1,35 +1,32 @@
-import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core'
-import { CommonModule } from '@angular/common'
+import { Component, ChangeDetectionStrategy, input, output } from '@angular/core'
+import { NgIf } from '@angular/common'
 import { StatusCodes, ReasonPhrases, getReasonPhrase } from 'http-status-codes'
 import { LinkComponent } from 'components/link/link.component'
 
 @Component({
-    standalone: true,
     selector: 'cmp-message',
     templateUrl: './message.component.html',
-    styleUrls: ['./message.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [CommonModule, LinkComponent],
+    imports: [NgIf, LinkComponent],
 })
 export class MessageComponent {
-    @Input()
-    public code: StatusCodes = StatusCodes.OK
+    public readonly code = input<StatusCodes>(StatusCodes.OK)
 
-    @Output()
-    public retry: EventEmitter<void> = new EventEmitter()
+    public readonly retry = output()
 
     /**
      * Only show message if the status code is between 400 and 599.
      */
     public get show(): boolean {
-        return this.code >= (400 as StatusCodes) && this.code <= (599 as StatusCodes)
+        return this.code() >= (400 as StatusCodes) && this.code() <= (599 as StatusCodes)
     }
 
     /**
      * Returns a reason phrase or error message based on the given status code.
      */
     public get message(): string | ReasonPhrases {
-        switch (this.code) {
+        const code = this.code()
+        switch (code) {
             // 401
             case StatusCodes.UNAUTHORIZED:
                 return 'You are not authenticated. Please authenticate and try again.'
@@ -60,6 +57,6 @@ export class MessageComponent {
         }
 
         // default reason phrases
-        return getReasonPhrase(this.code)
+        return getReasonPhrase(code)
     }
 }
