@@ -64,20 +64,17 @@
             },
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "server": "src/main.server.ts",
             "polyfills": [],
             "tsConfig": "tsconfig.app.json",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles/common.css"],
+            "scripts": [],
+            "server": "src/main.server.ts",
             "prerender": {
               "routesFile": "routes.txt"
             },
             "ssr": {
               "entry": "server.ts"
-            },
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/scss/styles.scss"],
-            "scripts": [],
-            "stylePreprocessorOptions": {
-              "includePaths": ["src/scss"]
             }
           },
           "defaultConfiguration": "production",
