@@ -1,4 +1,5 @@
-import { ApplicationConfig, ValueProvider, APP_ID } from '@angular/core'
+import type { ApplicationConfig, ValueProvider } from '@angular/core'
+import { provideExperimentalZonelessChangeDetection, APP_ID } from '@angular/core'
 import { provideClientHydration } from '@angular/platform-browser'
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async'
 import { provideRouter } from '@angular/router'
@@ -13,6 +14,7 @@ export const provideAppId: () => ValueProvider = (): ValueProvider => ({
 
 export const appConfig: ApplicationConfig = {
     providers: [
+        provideExperimentalZonelessChangeDetection(),
         provideClientHydration(),
         provideAnimationsAsync(),
         provideRouter(routes, ...features),
