@@ -1,3 +1,30 @@
+## [1.2.1](https://github.com/pascaliske/docker-traefik-errors/compare/v1.2.0...v1.2.1) (2025-07-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency express to v4.19.2 [security] ([f4e36fe](https://github.com/pascaliske/docker-traefik-errors/commit/f4e36fe1f6a2d85b23a5a4ea099722a35764de0b))
+* **deps:** update dependency express to v4.20.0 [security] ([25092c7](https://github.com/pascaliske/docker-traefik-errors/commit/25092c72d0767272ee191b4fdcf76da33edcaf86))
+* **deps:** update dependency ngx-progressbar to v12 ([4383d28](https://github.com/pascaliske/docker-traefik-errors/commit/4383d2847c8cb6a3e9c5115fdfd5f807fab289a1))
+* **deps:** update dependency ngx-progressbar to v13 ([25b5e4e](https://github.com/pascaliske/docker-traefik-errors/commit/25b5e4e54c4a2819a5f2ee5b0e1c645f3d0ee6ed))
+* **deps:** update dependency ngx-progressbar to v14 ([f8fb862](https://github.com/pascaliske/docker-traefik-errors/commit/f8fb86209bbdabd02275f5a96be1911cebcd655f))
+* **deps:** update dependency zone.js to ~0.15.0 ([5853ffc](https://github.com/pascaliske/docker-traefik-errors/commit/5853ffcf273034852a489e2089c34a79bce3ab1b))
+
+
+### Features
+
+* migrate to experimental zoneless change detection ([7dc8b1a](https://github.com/pascaliske/docker-traefik-errors/commit/7dc8b1ae531075fb8436c86d11a7d726b299cd8a))
+* update angular to v18 ([f5c4efd](https://github.com/pascaliske/docker-traefik-errors/commit/f5c4efd2ed14f3fbc16308aacb9afe6fd6966f14))
+* update angular to v18.2.x ([e2e7d47](https://github.com/pascaliske/docker-traefik-errors/commit/e2e7d47fd80f42791a872df4a5cee04f135ce029))
+* update angular-eslint stack to latest versions ([b012184](https://github.com/pascaliske/docker-traefik-errors/commit/b01218405a92e189b1b316e3074399cc67592e63))
+* upgrade angular to v19 ([e7d8fad](https://github.com/pascaliske/docker-traefik-errors/commit/e7d8fada349f409f051b132d6f0a7c3d376a20e3))
+* upgrade angular to v19.0.3 ([5815ad4](https://github.com/pascaliske/docker-traefik-errors/commit/5815ad4b8a4708a3d05d78b352b5945569bde846))
+* upgrade angular to v19.2.0 ([4e95e06](https://github.com/pascaliske/docker-traefik-errors/commit/4e95e0693216b67b4e8074253ebfce219c949a52))
+* upgrade angular to v20 ([0cea4e4](https://github.com/pascaliske/docker-traefik-errors/commit/0cea4e4aff29054741366bac4e6f5313b44a0836))
+* upgrade eslint stack ([eecb6fa](https://github.com/pascaliske/docker-traefik-errors/commit/eecb6faa55b5f2d7862464ccade6d4c6c95d66fd))
+
+
+
 # [1.2.0](https://github.com/pascaliske/docker-traefik-errors/compare/v1.1.0...v1.2.0) (2024-01-29)
 
 
