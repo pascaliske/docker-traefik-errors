@@ -1,13 +1,18 @@
-<div class="cmp-error" *ngIf="code$ | async as code">
-    <cmp-header [@fade]="code"></cmp-header>
-    <div class="cmp-error__content">
-        <cmp-code class="cmp-error__code" [code]="code" [@code]="code"></cmp-code>
-        <cmp-message
-            class="cmp-error__message"
-            [code]="code"
-            [@message]="code"
-            (retry)="retry()"
-        ></cmp-message>
-        <cmp-illustration class="cmp-error__illustration" [@illustration]="code"></cmp-illustration>
+@if (code$ | async; as code) {
+    <div class="cmp-error">
+        <cmp-header [@fade]="code"></cmp-header>
+        <div class="cmp-error__content">
+            <cmp-code class="cmp-error__code" [code]="code" [@code]="code"></cmp-code>
+            <cmp-message
+                class="cmp-error__message"
+                [code]="code"
+                [@message]="code"
+                (retry)="retry()"
+            ></cmp-message>
+            <cmp-illustration
+                class="cmp-error__illustration"
+                [@illustration]="code"
+            ></cmp-illustration>
+        </div>
     </div>
-</div>
+}

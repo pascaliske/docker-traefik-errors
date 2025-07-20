@@ -1,6 +1,6 @@
-import { Component, Inject } from '@angular/core'
+import { Component, DOCUMENT, inject } from '@angular/core'
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
-import { NgIf, AsyncPipe, DOCUMENT } from '@angular/common'
+import { AsyncPipe } from '@angular/common'
 import { RouterModule, ActivatedRoute, ParamMap } from '@angular/router'
 import { Observable, combineLatest, of } from 'rxjs'
 import { map, filter, take, delay } from 'rxjs/operators'
@@ -16,7 +16,6 @@ import { animations } from './error.animations'
     templateUrl: './error.component.html',
     styleUrls: ['./error.component.scss'],
     imports: [
-        NgIf,
         AsyncPipe,
         RouterModule,
         HeaderComponent,
@@ -27,6 +26,10 @@ import { animations } from './error.animations'
     animations,
 })
 export default class ErrorComponent {
+    private readonly document: Document = inject<Document>(DOCUMENT)
+
+    private readonly route: ActivatedRoute = inject(ActivatedRoute)
+
     public code$: Observable<StatusCodes> = this.route.queryParamMap.pipe(
         takeUntilDestroyed(),
         map<ParamMap, StatusCodes>(params => parseInt(params.get('code') ?? '404', 10)),
@@ -43,11 +46,6 @@ export default class ErrorComponent {
     public message$: Observable<StatusCodes> = this.code$.pipe(delay(300))
 
     public illustration$: Observable<StatusCodes> = this.code$.pipe(delay(600))
-
-    public constructor(
-        @Inject(DOCUMENT) private readonly document: Document,
-        private readonly route: ActivatedRoute,
-    ) {}
 
     public retry(): void {
         combineLatest([this.retry$, of(this.document.location.href)])

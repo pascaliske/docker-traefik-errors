@@ -1,5 +1,5 @@
-import { Component } from '@angular/core'
-import { NgIf, AsyncPipe } from '@angular/common'
+import { Component, inject } from '@angular/core'
+import { AsyncPipe } from '@angular/common'
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
 import { ActivatedRoute } from '@angular/router'
 import { Observable } from 'rxjs'
@@ -10,13 +10,13 @@ import { LinkComponent } from 'components/link/link.component'
     selector: 'cmp-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
-    imports: [NgIf, AsyncPipe, LinkComponent],
+    imports: [AsyncPipe, LinkComponent],
 })
 export class HeaderComponent {
+    private readonly route: ActivatedRoute = inject(ActivatedRoute)
+
     public home$: Observable<string | null> = this.route.queryParamMap.pipe(
         takeUntilDestroyed(),
         map(params => params.get('home')),
     )
-
-    public constructor(private readonly route: ActivatedRoute) {}
 }

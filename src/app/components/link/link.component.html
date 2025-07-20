@@ -1,7 +1,8 @@
-<ng-container *ngIf="label(); else content">
-    <span class="material-icons-outlined" *ngIf="icon()">{{ icon() }}</span>
+@if (label()) {
+    @if (icon()) {
+        <span class="material-icons-outlined">{{ icon() }}</span>
+    }
     <span class="cmp-link__label">{{ label() }}</span>
-</ng-container>
-<ng-template #content>
+} @else {
     <ng-container></ng-container>
-</ng-template>
+}

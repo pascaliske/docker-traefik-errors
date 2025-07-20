@@ -12,7 +12,8 @@
       "style": "scss",
       "skipTests": true,
       "standalone": true,
-      "export": true
+      "export": true,
+      "type": "component"
     },
     "@schematics/angular:class": {
       "skipTests": true
@@ -20,24 +21,30 @@
     "@schematics/angular:directive": {
       "prefix": "",
       "skipTests": true,
-      "export": true
+      "export": true,
+      "type": "directive"
     },
     "@schematics/angular:guard": {
-      "skipTests": true
+      "skipTests": true,
+      "typeSeparator": "."
     },
     "@schematics/angular:interceptor": {
-      "skipTests": true
+      "skipTests": true,
+      "typeSeparator": "."
     },
     "@schematics/angular:pipe": {
       "skipTests": true,
-      "export": true
+      "export": true,
+      "typeSeparator": "."
     },
     "@schematics/angular:resolver": {
-      "skipTests": true
+      "skipTests": true,
+      "typeSeparator": "."
     },
     "@schematics/angular:service": {
       "skipTests": true,
-      "flat": false
+      "flat": false,
+      "type": "service"
     },
     "@schematics/angular:application": {
       "strict": true
@@ -47,6 +54,9 @@
     },
     "@angular-eslint/schematics:library": {
       "setParserOptionsProject": true
+    },
+    "@schematics/angular:module": {
+      "typeSeparator": "."
     }
   },
   "projects": {

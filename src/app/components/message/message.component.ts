@@ -1,5 +1,4 @@
 import { Component, ChangeDetectionStrategy, input, output } from '@angular/core'
-import { NgIf } from '@angular/common'
 import { StatusCodes, ReasonPhrases, getReasonPhrase } from 'http-status-codes'
 import { LinkComponent } from 'components/link/link.component'
 
@@ -7,7 +6,7 @@ import { LinkComponent } from 'components/link/link.component'
     selector: 'cmp-message',
     templateUrl: './message.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [NgIf, LinkComponent],
+    imports: [LinkComponent],
 })
 export class MessageComponent {
     public readonly code = input<StatusCodes>(StatusCodes.OK)

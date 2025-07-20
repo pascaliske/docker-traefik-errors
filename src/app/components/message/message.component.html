@@ -1,4 +1,6 @@
-<ng-container *ngIf="show">
-    <span *ngIf="message.length > 0">{{ message }} — </span>
+@if (show) {
+    @if (message.length > 0) {
+        <span>{{ message }} — </span>
+    }
     <a [label]="'Retry!'" (click)="this.retry.emit()"></a>
-</ng-container>
+}

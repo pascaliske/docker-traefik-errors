@@ -1,5 +1,4 @@
-import { inject } from '@angular/core'
-import { DOCUMENT } from '@angular/common'
+import { inject, DOCUMENT } from '@angular/core'
 import { Router, ActivatedRoute, UrlTree } from '@angular/router'
 import { StatusCodes } from 'http-status-codes'
 

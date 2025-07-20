@@ -1,7 +1,7 @@
-<ng-container *ngIf="home$ | async as home">
+@if (home$ | async; as home) {
     <div class="cmp-header">
         <div class="cmp-header__links">
             <a class="cmp-header__link" [href]="home" [label]="'Home'" [icon]="'apps'"></a>
         </div>
     </div>
-</ng-container>
+}
