@@ -1,5 +1,5 @@
 # --- dependencies image
-FROM --platform=${BUILDPLATFORM} node:22-alpine AS dependencies
+FROM --platform=${BUILDPLATFORM} node:24-alpine AS dependencies
 LABEL maintainer="info@pascaliske.dev"
 WORKDIR /build
 
@@ -11,7 +11,7 @@ COPY yarn.lock /build
 RUN yarn install --frozen-lockfile --ignore-scripts
 
 # builder image
-FROM --platform=${BUILDPLATFORM} node:22-alpine AS builder
+FROM --platform=${BUILDPLATFORM} node:24-alpine AS builder
 LABEL maintainer="info@pascaliske.dev"
 WORKDIR /build
 
