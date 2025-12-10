@@ -9,7 +9,6 @@ import { HeaderComponent } from 'components/header/header.component'
 import { CodeComponent } from 'components/code/code.component'
 import { MessageComponent } from 'components/message/message.component'
 import { IllustrationComponent } from 'components/illustration/illustration.component'
-import { animations } from './error.animations'
 
 @Component({
     selector: 'cmp-error',
@@ -23,7 +22,6 @@ import { animations } from './error.animations'
         MessageComponent,
         IllustrationComponent,
     ],
-    animations,
 })
 export default class ErrorComponent {
     private readonly document: Document = inject<Document>(DOCUMENT)

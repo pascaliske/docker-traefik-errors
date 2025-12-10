@@ -69,4 +69,44 @@
             grid-column: 5 / 7;
         }
     }
+
+    &--fade {
+        opacity: 0;
+        animation: fade 0.5s ease-out 0.5s;
+    }
+
+    &--code {
+        opacity: 0;
+        animation: slide 0.5s ease-out 0.5s;
+    }
+
+    &--message {
+        opacity: 0;
+        animation: slide 0.5s ease-out 0.65s;
+    }
+
+    &--illustration {
+        opacity: 0;
+        animation: slide 0.5s ease-out 0.8s;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
