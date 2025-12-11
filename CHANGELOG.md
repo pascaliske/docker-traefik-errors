@@ -1,3 +1,14 @@
+# [1.3.0](https://github.com/pascaliske/docker-traefik-errors/compare/v1.2.1...v1.3.0) (2025-12-11)
+
+
+### Features
+
+* switch to tailwind styling ([7353cf6](https://github.com/pascaliske/docker-traefik-errors/commit/7353cf6a973fcef197f1216bb4899a15055bab01))
+* upgrade angular to v21 ([08c6325](https://github.com/pascaliske/docker-traefik-errors/commit/08c6325762264ec26b65ba62580c9eba5fb589db))
+* upgrade eslint stack ([16feaf1](https://github.com/pascaliske/docker-traefik-errors/commit/16feaf12271745f33633d1520286688e4a62536b))
+
+
+
 ## [1.2.1](https://github.com/pascaliske/docker-traefik-errors/compare/v1.2.0...v1.2.1) (2025-07-20)
 
 
