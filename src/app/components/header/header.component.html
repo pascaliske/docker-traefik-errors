@@ -1,7 +1,9 @@
-@if (home$ | async; as home) {
-    <div class="cmp-header">
-        <div class="cmp-header__links">
-            <a class="cmp-header__link" [href]="home" [label]="'Home'" [icon]="'apps'"></a>
+<div
+    class="grid grid-cols-[repeat(8,1fr)] h-(--header-height) grid-rows-[repeat(1,var(--header-height))] gap-(--grid-gap)"
+>
+    @if (home$ | async; as home) {
+        <div class="flex items-center justify-center col-end-9 col-start-1">
+            <cmp-link [href]="home" [label]="'Home'" [icon]="'apps'"></cmp-link>
         </div>
-    </div>
-}
+    }
+</div>

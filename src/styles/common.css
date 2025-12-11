@@ -1,4 +1,6 @@
-:root {
+@import 'tailwindcss';
+
+@theme {
     --color-background: #2d333d;
     --color-foreground: #fff;
     --color-accent: #00dfbf;
@@ -7,6 +9,42 @@
     --grid-gap: 20px;
     --header-height: 70px;
 
+    --animate-fade: fade 0.5s ease-out 0.5s;
+    --animate-code: slide 0.5s ease-out 0.5s;
+    --animate-message: slide 0.5s ease-out 0.65s;
+    --animate-illustration: slide 0.5s ease-out 0.8s;
+
+    @keyframes fade {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slide {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+:root {
     --ng-progress-color: var(--color-accent);
 }
 
@@ -16,25 +54,4 @@
         --color-foreground: #2d333d;
         --color-shadow: #e2e2e2;
     }
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
-html,
-body {
-    width: 100vw;
-    height: 100vh;
-}
-
-body {
-    color: var(--color-foreground);
-    background-color: var(--color-background);
-    transition:
-        color 0.3s,
-        background-color 0.3s;
 }

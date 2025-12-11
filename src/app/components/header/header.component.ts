@@ -9,7 +9,6 @@ import { LinkComponent } from 'components/link/link.component'
 @Component({
     selector: 'cmp-header',
     templateUrl: './header.component.html',
-    styleUrls: ['./header.component.scss'],
     imports: [AsyncPipe, LinkComponent],
 })
 export class HeaderComponent {

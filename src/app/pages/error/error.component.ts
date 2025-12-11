@@ -13,7 +13,6 @@ import { IllustrationComponent } from 'components/illustration/illustration.comp
 @Component({
     selector: 'cmp-error',
     templateUrl: './error.component.html',
-    styleUrls: ['./error.component.scss'],
     imports: [
         AsyncPipe,
         RouterModule,

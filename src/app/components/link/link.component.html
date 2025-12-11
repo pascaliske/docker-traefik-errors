@@ -1,8 +1,13 @@
-@if (label()) {
-    @if (icon()) {
-        <span class="material-icons-outlined">{{ icon() }}</span>
+<a
+    class="inline-flex items-center text-accent transition-colors duration-200 cursor-pointer relative after:w-0 after:h-0.5 after:absolute after:left-1/2 after:-bottom-1 after:bg-accent after:transition-[width_left] after:duration-200 after:ease-out hover:after:w-full hover:after:left-0"
+    [href]="href()"
+>
+    @if (label()) {
+        @if (icon()) {
+            <span class="material-icons-outlined mr-[5px]">{{ icon() }}</span>
+        }
+        <span class="mr-[3px]">{{ label() }}</span>
+    } @else {
+        <ng-container></ng-container>
     }
-    <span class="cmp-link__label">{{ label() }}</span>
-} @else {
-    <ng-container></ng-container>
-}
+</a>

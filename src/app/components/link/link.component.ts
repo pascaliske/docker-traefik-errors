@@ -1,13 +1,15 @@
-import { Component, input } from '@angular/core'
+import { Component, input, output } from '@angular/core'
 
 @Component({
-    // eslint-disable-next-line @angular-eslint/component-selector
-    selector: 'a',
+    selector: 'cmp-link',
     templateUrl: './link.component.html',
-    styleUrls: ['./link.component.scss'],
 })
 export class LinkComponent {
+    public readonly href = input<string>()
+
     public readonly label = input<string>()
 
     public readonly icon = input<string>()
+
+    public readonly click = output<void>()
 }

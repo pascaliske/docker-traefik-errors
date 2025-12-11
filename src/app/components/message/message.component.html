@@ -2,5 +2,5 @@
     @if (message.length > 0) {
         <span>{{ message }} — </span>
     }
-    <a [label]="'Retry!'" (click)="this.retry.emit()"></a>
+    <cmp-link [label]="'Retry!'" (click)="this.retry.emit()"></cmp-link>
 }

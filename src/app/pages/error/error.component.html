@@ -1,21 +1,23 @@
 @if (code$ | async; as code) {
-    <div class="cmp-error">
-        <cmp-header animate.enter="cmp-error--fade"></cmp-header>
-        <div class="cmp-error__content">
+    <div class="w-screen h-screen">
+        <cmp-header class="starting:opacity-0" animate.enter="animate-fade"></cmp-header>
+        <div
+            class="grid h-[calc(100vh-var(--header-height)-var(--grid-gap))] grid-cols-[1fr] grid-rows-[repeat(3,min-content)] gap-(--grid-gap) mx-(--grid-gap) my-0 min-[1280px]:grid-cols-[repeat(8,1fr)] min-[1280px]:grid-rows-[2fr_3fr]"
+        >
             <cmp-code
-                class="cmp-error__code"
-                animate.enter="cmp-error--code"
+                class="starting:opacity-0 row-start-2 row-end-3 col-start-1 col-end-2 text-accent text-[10rem]/[0.8] font-bold text-center min-[1280px]:row-start-1 min-[1280px]:row-end-2 min-[1280px]:col-start-3 min-[1280px]:col-end-6 min-[1280px]:-ml-2 min-[1280px]:pt-20 min-[1280px]:text-[310px] min-[1280px]:text-left"
+                animate.enter="animate-code"
                 [code]="code"
             ></cmp-code>
             <cmp-message
-                class="cmp-error__message"
-                animate.enter="cmp-error--message"
+                class="starting:opacity-0 row-start-3 row-end-4 col-start-1 col-end-2 pt-(--grid-gap) text-(--color-foreground) text-[22px] text-center min-[1280px]:row-start-2 min-[1280px]:row-end-3 min-[1280px]:col-start-3 min-[1280px]:col-end-5 min-[1280px]:pt-0 min-[1280px]:text-left"
+                animate.enter="animate-message"
                 [code]="code"
                 (retry)="retry()"
             ></cmp-message>
             <cmp-illustration
-                class="cmp-error__illustration"
-                animate.enter="cmp-error--illustration"
+                class="starting:opacity-0 w-full h-full flex items-start -mt-20 row-start-1 row-end-2 col-start-1 col-end-2 min-[768px]:mt-0 min-[1280px]:col-start-6 min-[1280px]:col-end-8 min-[1280px]:row-start-1 min-[1280px]:row-end-3 min-[1600px]:col-start-5 min-[1600px]:col-end-7"
+                animate.enter="animate-illustration"
             ></cmp-illustration>
         </div>
     </div>

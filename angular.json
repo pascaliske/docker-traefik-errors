@@ -9,7 +9,7 @@
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "cmp",
-      "style": "scss",
+      "style": "css",
       "skipTests": true,
       "standalone": true,
       "export": true,
