@@ -25,7 +25,7 @@ COPY . /build
 RUN yarn run build
 
 # --- final image
-FROM nginx:1.29.4-alpine
+FROM nginx:1.29.5-alpine
 LABEL maintainer="info@pascaliske.dev"
 
 # environment
